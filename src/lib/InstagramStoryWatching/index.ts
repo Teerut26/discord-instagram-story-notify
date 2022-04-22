@@ -22,6 +22,7 @@ export default class InstagramStoryWatching {
     }
 
     async getData() {
+        console.log("RUNNING")
         setInterval(async () => {
             let res = await this.http_request.getData(this.url, this.cookie);
             let last_data = _.last(res.data.reel?.items);
