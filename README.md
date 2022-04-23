@@ -1,7 +1,7 @@
 ## setup .env file
 
 ```
-INSTAGRAM_URL=
+INSTAGRAM_URL=https://i.instagram.com/api/v1/feed/user/[user-id]/story/
 TIME=30000
 WEBHOOK=
 COOKIE=
