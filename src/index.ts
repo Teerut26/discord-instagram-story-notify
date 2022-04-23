@@ -8,11 +8,13 @@ let instagramStoryWatching = new InstagramStoryWatching(
     process.env.COOKIE as string
 );
 
+instagramStoryWatching
+
 const webhook = new WebhookClient({
     url: process.env.WEBHOOK as string,
 });
 
-instagramStoryWatching.events.on("item", (data: Item) => {
+instagramStoryWatching.on("item", (data: Item) => {
     console.log(data.image_versions2.candidates[0].url);
     const attachment = new MessageAttachment(
         data.image_versions2.candidates[0].url
